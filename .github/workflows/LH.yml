@@ -10,12 +10,12 @@ on:
   
   
 jobs:
-  build:
-        runs-on: self-hosted
+  Start_test:
+        runs-on: 'self-hosted'
 
     
     steps:
-    echo Preparing to launch the test
+    echo "Preparing to launch the test
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
