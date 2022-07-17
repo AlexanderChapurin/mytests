@@ -1,22 +1,20 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CICD Lighthouse
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+  
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  lighthouse-test:
     # The type of runner that the job will run on
     runs-on: [ self-hosted ]
 
@@ -27,12 +25,12 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: cd opt/opt/lighthouse_tests
+        run: cd opt/lighthouse_tests
 
 
       # Runs a set of commands using the runners shell
       - name: Show Current directory
-        run: pwd
+        run: pwd opt/lighthouse_tests
          
       - name: Show content
-        run: ls -la
+        run: ls -la 
