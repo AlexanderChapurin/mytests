@@ -29,8 +29,6 @@ jobs:
 
 
       # Runs a set of commands using the runners shell
-      - name: Show Current directory
-        run: pwd 
-         
+               
       - name: Show content
         run: ls -la /opt/lighthouse_tests
