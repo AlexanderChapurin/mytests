@@ -36,3 +36,8 @@ jobs:
                
       - name: Show content
         run: ls -la 
+        
+      # Checks available docker images
+               
+      - name: Show images
+        run: docker images  
