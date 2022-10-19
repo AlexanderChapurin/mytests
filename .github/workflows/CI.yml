@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  
+  workflow_dispatch:
+    
+defaults:
+  run:
+    working-directory: /opt/Lighthouse_CI/lighthouse
+
+jobs:
+  lhci:
+    name: Lighthouse
+    runs-on: [ self-hosted ]
+    steps:
+
+      
+      - name: adding new files
+        run: git add .
+
+      - name: setting commit
+        run: git commit -m "new commit"
+
+      - name: start Lighthouse CI
+        run: npx lhci autorun 
+
+      - name: confirm test finish
+        run: echo "test is finished" 
