@@ -1,0 +1,19 @@
+name: Lighthouse CI
+on:
+  
+  workflow_dispatch:
+    
+defaults:
+  run:
+    working-directory: /opt/Lighthouse_CI/lighthouse
+
+jobs:
+  lighthouse:
+    runs-on: [ self-hosted ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          urls: |
+            https://www.harley-davidson.com/us/en/index.html
